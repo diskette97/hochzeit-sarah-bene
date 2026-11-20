@@ -1,0 +1,28 @@
+{
+  "name": "hochzeit-sarah-bene",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:migrate": "node --env-file-if-exists=.env.local scripts/migrate.mjs",
+    "create-admin": "node --env-file-if-exists=.env.local scripts/create-admin.mjs",
+    "test": "node --experimental-strip-types --no-warnings scripts/test-calc.mts && node --experimental-strip-types --no-warnings scripts/test-auth.mts"
+  },
+  "dependencies": {
+    "next": "^16.4.6",
+    "pg": "^8.23.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5.9.0"
+  }
+}
