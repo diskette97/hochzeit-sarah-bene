@@ -1,0 +1,13 @@
+# Wird von der Pipeline netcup-deploy ausgeliefert (siehe diskette97/netcup-deploy).
+# Die Seite liegt vorläufig unter einer sslip.io-Adresse (zeigt automatisch auf den Server, HTTPS von Caddy).
+# Eigene Domain: A-Record auf 152.53.114.139 setzen, hier und im Dockerfile (SITE_URL) eintragen.
+type: docker
+name: hochzeit
+port: 3000
+healthcheck: /
+memory: 1024m
+domains:
+  - hochzeit.152-53-114-139.sslip.io
+volumes:
+  - pgdata:/var/lib/postgresql/data
+  - backups:/backups
