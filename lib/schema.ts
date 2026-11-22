@@ -150,7 +150,7 @@ export const TABLES = {
     fields: [
       { key: "name", label: "Name", type: "text", required: true, list: true },
       { key: "side", label: "Seite", type: "select", options: ["Beide", "Sarah", "Bene"], required: true, list: true },
-      { key: "group_name", label: "Gruppe (z. B. Familie, Freunde)", type: "text", list: true },
+      { key: "group_name", label: "Gruppe (z. B. Familie, Freunde)", type: "text" },
       { key: "priority", label: "Kategorie", type: "select", options: ["A – gesetzt", "B – gerne", "C – vielleicht"], required: true, list: true },
       { key: "invited", label: "Eingeladen", type: "bool", list: true },
       { key: "rsvp", label: "Rückmeldung", type: "select", options: ["offen", "Zusage", "Absage"], required: true, list: true },
