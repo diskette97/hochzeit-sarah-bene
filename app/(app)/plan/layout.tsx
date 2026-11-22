@@ -3,6 +3,7 @@ import { requirePlanner } from "@/lib/session";
 
 const LINKS = [
   { href: "/plan", label: "Übersicht" },
+  { href: "/plan/termine", label: "Termine" },
   { href: "/plan/budget", label: "Budget" },
   { href: "/plan/aufgaben", label: "Aufgaben" },
   { href: "/plan/dienstleister", label: "Dienstleister" },

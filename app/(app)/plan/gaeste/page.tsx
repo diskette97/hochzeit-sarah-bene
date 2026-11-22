@@ -8,7 +8,10 @@ export default async function Page() {
   return (
     <>
       <h1>Gästeliste</h1>
-      <p className="muted">Kategorie A = gesetzt, B = gerne, C = vielleicht.</p>
+      <p className="muted">
+        Kategorie A = gesetzt, B = gerne, C = vielleicht. Telefon und E-Mail pflegt ihr pro Gast;{" "}
+        <a href="/plan/gaeste/export">Kontakte für Google exportieren (CSV)</a> und in Google Kontakte importieren, dann sind sie auf dem Handy.
+      </p>
       <CrudManager tableKey="guests" rows={data} />
     </>
   );
