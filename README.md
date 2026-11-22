@@ -33,7 +33,17 @@ Technik: Next.js + TypeScript, Datenbank PostgreSQL mit eigener Anmeldung (kein 
 - Gäste sehen nie, wer ein Geschenk reserviert hat; nur Planer sehen den Namen.
 - Fehlversuche beim Login werden begrenzt (je 15 Minuten: 8 pro E-Mail und IP, 30 pro E-Mail insgesamt, 40 pro IP); Registrierungen: 10 Versuche pro IP und Stunde.
 
-## Auf dem Netcup-Server einrichten
+## Deployment über netcup-deploy (aktuell)
+
+Ein Push auf `main` liefert die Seite über die Pipeline `netcup-deploy` aus (`deploy.yml`, `Dockerfile`): ein Container mit App und PostgreSQL, Daten im Volume `pgdata`, tägliches Backup im Volume `backups`. Adresse vorläufig `https://hochzeit.152-53-114-139.sslip.io`. Admin-Konto einmalig in der Server-Konsole anlegen:
+
+```bash
+docker exec -it hochzeit /app/deploy/container-admin.sh deine@mail.de "Dein Name"
+```
+
+`deploy/setup-server.sh` ist die ältere Variante ohne Container. Sie überschreibt die Caddyfile und darf auf diesem Server nicht ausgeführt werden.
+
+## Auf dem Netcup-Server einrichten (ältere Variante, nicht für den gemeinsamen Server)
 
 Voraussetzung: Debian-Server mit root-Zugriff, eine Domain oder die kostenlose IP-Domain `<IP-mit-Bindestrichen>.sslip.io` (z. B. `152-53-114-139.sslip.io`), Ports 80 und 443 erreichbar.
 
