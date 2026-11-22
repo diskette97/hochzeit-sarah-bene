@@ -172,7 +172,7 @@ export const TABLES = {
     emptyText: "Noch keine Termine eingetragen.",
     fields: [
       { key: "option_date", label: "Datum", type: "date", required: true, list: true },
-      { key: "status", label: "Status", type: "select", options: ["Möglich", "Angebot offen", "Reserviert", "Gebucht", "Verworfen"], required: true, list: true },
+      { key: "status", label: "Status", type: "select", options: ["Favorit", "Möglich", "Angebot offen", "Reserviert", "Gebucht", "Verworfen"], required: true, list: true },
       { key: "offer_until", label: "Option / Angebot gültig bis", type: "date" },
       { key: "score_weather", label: "Note Wetter (0–10)", type: "number", max: 10, list: true },
       { key: "score_venue", label: "Note Schloss/Ablauf (0–10)", type: "number", max: 10, list: true },
